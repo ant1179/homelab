@@ -1,11 +1,12 @@
 #!/bin/sh
 
-echo "*********************"
-echo "creating devcontainer"
-echo "*********************"
-devpod-cli up .
-
-echo "**************************"
-echo "connecting to devcontainer"
-echo "**************************"
-devpod-cli ssh .
+echo "*************************"
+echo "cleaning the devcontainer"
+echo "*************************"
+CURRENT_DIR=${PWD}
+devpod stop .
+devpod delete .
+cd ../
+sudo chown -R ${USER}:${USER} ${CURRENT_DIR}
+cd ${CURRENT_DIR}
+rm -rf .devpod-internal
