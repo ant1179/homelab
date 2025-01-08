@@ -5,11 +5,12 @@
     "ghcr.io/rio/features/k9s:1": {},
     "ghcr.io/jsburckhardt/devcontainer-features/flux:1" : {},
     "ghcr.io/jungaretti/features/ripgrep:1": {},
-    "ghcr.io/devcontainers-extra/features/direnv:1": {},
+    "ghcr.io/devcontainers-extra/features/direnv-asdf:2": {},
     "ghcr.io/devcontainers-extra/features/exa:1": {},
     "ghcr.io/devcontainers-extra/features/fzf:1": {},
     "ghcr.io/devcontainers-extra/features/fd:1": {},
-    "ghcr.io/georgofenbeck/features/lazygit-linuxbinary:1" : {}
+    "ghcr.io/georgofenbeck/features/lazygit-linuxbinary:1" : {},
+    "ghcr.io/devcontainers-extra/features/kubectl-asdf:2": {}
   },
   "onCreateCommand": "sudo chsh -s /usr/bin/zsh $USER",
   "settings": {
