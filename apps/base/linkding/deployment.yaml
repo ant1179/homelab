@@ -23,7 +23,7 @@ spec:
             - containerPort: 9090
           envForm:
             - secretRef:
-              name: linkding-superuser-credentials
+                name: linkding-superuser-credentials
           securityContext:
             allowPrivilegeEscalation: false
           volumeMounts:
