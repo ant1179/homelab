@@ -28,3 +28,8 @@ spec:
   values:
     grafana:
       adminPassword: alex
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - "grafana.mobol-homelab.net"
