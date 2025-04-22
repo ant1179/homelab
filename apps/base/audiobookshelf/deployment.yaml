@@ -16,7 +16,17 @@ spec:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:2.20.0
           ports:
-            - containerPort: 80
+            - containerPort: ${PORT}
+          envFrom:
+            - configMapRef:
+                name: audiobookshelf-configmap
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "100m"
+              memory: "512Mi"
           volumeMounts:
             - name: audiobookshelf-audiobooks
               mountPath: /audiobooks
