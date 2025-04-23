@@ -4,15 +4,7 @@ resources:
   - namespace.yaml
   - deployment.yaml
   - service.yaml
-vars:
-  - name: APP_PORT
-    objref:
-      kind: ConfigMap
-      name: app-config
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.APP_PORT
 configMapGenerator:
-  - name: app-config
+  - name: audiobookshelf-config
     literals:
-      - APP_PORT=80
+      - PORT=80
