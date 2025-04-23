@@ -4,3 +4,7 @@ resources:
   - namespace.yaml
   - deployment.yaml
   - service.yaml
+configMapGenerator:
+  - name: app-config
+    literals:
+      - APP_PORT=80
