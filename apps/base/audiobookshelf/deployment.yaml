@@ -16,10 +16,10 @@ spec:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:2.20.0
           ports:
-            - containerPort: ${APP_PORT}
+            - containerPort: $(APP_PORT)
           envFrom:
             - configMapRef:
-                name: audiobookshelf-configmap
+                name: app-config
           resources:
             requests:
               cpu: "100m"
