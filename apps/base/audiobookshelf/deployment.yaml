@@ -36,8 +36,11 @@ spec:
               mountPath: /config
       volumes:
         - name: audiobookshelf-audiobooks
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: audiobookshelf-audiobooks-pvc
         - name: audiobookshelf-podcasts
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: audiobookshelf-podcasts-pvc
         - name: audiobookshelf-config
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: audiobookshelf-config-pvc
