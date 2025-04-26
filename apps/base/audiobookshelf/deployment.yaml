@@ -31,6 +31,8 @@ spec:
             limits:
               cpu: "100m"
               memory: "512Mi"
+          securityContext:
+            allowPrivilegeEscalation: false
           volumeMounts:
             - name: audiobookshelf-audiobooks
               mountPath: /audiobooks
@@ -38,6 +40,8 @@ spec:
               mountPath: /podcasts
             - name: audiobookshelf-config
               mountPath: /config
+            - name: audiobookshelf-metadata
+              mountPath: /metadata
       volumes:
         - name: audiobookshelf-audiobooks
           persistentVolumeClaim:
@@ -48,3 +52,6 @@ spec:
         - name: audiobookshelf-config
           persistentVolumeClaim:
             claimName: audiobookshelf-config-pvc
+        - name: audiobookshelf-metadata
+          persistentVolumeClaim:
+            claimName: audiobookshelf-metadata-pvc
