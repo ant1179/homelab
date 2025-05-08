@@ -8,4 +8,4 @@ resources:
 configMapGenerator:
   - name: audiobookshelf-config
     literals:
-      - PORT=80
+      - PORT=3005
